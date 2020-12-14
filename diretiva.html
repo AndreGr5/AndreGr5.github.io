@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="textoDigitado">
+        <br>
+
+        <div>
+            <img  :src="AizawaNormal" :title="Aizawa" width="500px" height="300px">
+        </div>
+        <div v-if="textoDigitado == c1 ">
+            <img  :src="AizawaGif" :title="Aizawa" width="500px" height="300px">
+            <br>
+            <input type="text" v-model="segundafase">
+        </div>
+
+       
+
+        <div v-if="segundafase == c2 && textoDigitado == c1">
+            {{msg}}
+        </div>
+
+        
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    
+    <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    AizawaGif: 'aizawa.gif',
+                    AizawaNormal: 'aizawaface.png',
+                    textoDigitado: '',
+                    segundafase: '',
+                    msg: 'parabens',
+                    c1: 'sorria',
+                    c2: '13-11-1998',
+
+                }
+            })
+    </script>
+</body>
+</html>
