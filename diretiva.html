@@ -12,15 +12,15 @@
         <input type="text" v-model="textoDigitado">
         <br>
 
-        <div>
-            <img  :src="AizawaNormal" :title="Aizawa" width="500px" height="300px">
-        </div>
-        <div v-if="textoDigitado == c1 ">
+        
+        <div v-if="textoDigitado == c1">
             <img  :src="AizawaGif" :title="Aizawa" width="500px" height="300px">
             <br>
             <input type="text" v-model="segundafase">
         </div>
-
+        <div v-else> 
+            <img  :src="AizawaNormal" :title="Aizawa" width="500px" height="300px">
+        </div>
        
 
         <div v-if="segundafase == c2 && textoDigitado == c1">
@@ -43,7 +43,7 @@
                     segundafase: '',
                     msg: 'parabens',
                     c1: 'sorria',
-                    c2: '13-11-1998',
+                    c2: '13/11/1998',
 
                 }
             })
